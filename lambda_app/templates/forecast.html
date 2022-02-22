@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="row" style="padding-top: 50px;">
+        <h1>Forecast temperature</h1>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form>
+    
+                <div class="mb-3">
+                    <label class="form-label" for="pressure">Pressure</label>
+                    <input class="form-control" type="number" name="pressure" id="pressure">
+                    <div class="form-text">Atmospheric pressure in kPa. Typically ranges 1000 - 1050.</div>        
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label" for="humidty">Humidity</label>
+                    <input class="form-control" type="number" name="humidty" id="humidty">        
+                    <div class="form-text">Atmospheric humidty. Typically ranges: 40-60</div> 
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="city">City</label>
+                    <select class="form-select" id="city" name="city">
+                        <option value="perth">Perth</option>
+                        <option value="melbourne">Melbourne</option>
+                        <option value="sydney">Sydney</option>
+                        <option value="canberra">Canberra</option>
+                        <option value="darwin">Darwin</option>
+                        <option value="brisbane">Brisbane</option>
+                        <option value="adlaide">Adelaide</option>
+                        <option value="hobart">Hobart</option>
+                    </select>
+                </div>
+    
+                <button type="button" class="btn btn-dark" id="forecast">Submit</button>
+        </div>
+
+        <div class="row" style="padding-top: 50px;" id="forecasted-temp">
+            
+        </div>
+    </div>
+    
+</div>
+
+<script src="../static/js/forecast.js"></script>
+
+{% endblock %}
