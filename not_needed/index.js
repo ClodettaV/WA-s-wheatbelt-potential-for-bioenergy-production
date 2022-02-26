@@ -1,4 +1,4 @@
-var renderTemperature = (metric, years) => $.get(`/api/temperature`, (res) => {
+var renderTemperature = (metric, years) => $.get(`/api/data`, (res) => {
     var data = [
         {
             x: res.temps.map(row => new Date(row.datetime + "Z")), 

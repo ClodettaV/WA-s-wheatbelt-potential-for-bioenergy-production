@@ -9,13 +9,13 @@ app = Flask(__name__)
 
 # engine = create_engine(connection_url)
 CSV_ENDPOINT = os.environ.get("CSV_ENDPOINT")
-print (CSV_ENDPOINT)
+
 
 # page routes
     
-# @app.route("/")
-# def index():
-#    return render_template("index.html")
+@app.route("/")
+def index():
+   return render_template("index.html")
 
 @app.route("/forecast")
 def forecast():
@@ -25,19 +25,38 @@ def forecast():
 
 @app.route("/api/StrawYield")
 def get_straw_yield():
-#     print (CSV_ENDPOINT)
+
     df = pd.read_csv(CSV_ENDPOINT)
     data = df.to_dict(orient="records")
     return {"data": data}
 
 
+# @app.route("/straw_yield")
+# def forecast():
 
-@app.route("/api/predict/<soilpH>/<rain>", methods=["GET"])
-def do_predict(soilpH, rain):
+#     df = pd.read_csv(CSV_ENDPOINT)
+#     data = df.to_dict(orient="records")
+#     return {"data": data}
+
+
+    # recent_temps = pd.read_sql(f"""
+    #     select * 
+    #     from 
+    #         temperature inner join city on temperature.city_id = city.city_id
+    #     where
+    #         name = 'Perth'
+    #     order by datetime desc limit 100
+    # """, engine)
+    # return {"temps": recent_temps.to_dict(orient="records")}
+
+
+@app.route("/api/predict/<soilpH>/<rain>/<shire>", methods=["GET"])
+def do_predict(soilpH, rain, shire):
     user_input = {
         "tos_field_ph": float(soilpH), 
         "rainfall.yearToDate": float(rain), 
-        }
+        "shire": shire
+    }
     prediction = predict(user_input)
 
     return {"prediction": prediction}
