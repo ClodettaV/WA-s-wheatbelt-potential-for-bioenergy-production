@@ -1,0 +1,171 @@
+
+  body {
+   
+   background-color: #fffff;
+  }
+  
+  .skyblue {
+    background: rgb(255, 255, 255);
+  }
+  
+  .box{
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    margin-top:50px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:20px;
+    align-content: center;
+    color: #639487;
+      }
+  
+  .navbar {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 15px;
+    background: transparent; 
+    color: #639487;
+    padding-right: 100px;
+
+  }
+
+   .navbar-toggler {
+    align-content: center;
+    color: #639487;
+    
+  }
+    
+  .navbar li {
+    display: d-block;
+    padding: 1px;
+    margin-right: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+    background: rgb(225, 225, 225);
+    color: #639487;
+      }
+
+      .navbar-brand {
+        background: transparent;
+        color: #FFFFFF;
+        font-size: 40px;
+      }
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: transparent;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #FFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: #639487;
+  font-size: 14px;
+  }
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+  
+    h1 {
+    padding-top: 10px;  
+    font-size: 30px;
+    font-family: arial;
+    color: #639487;
+    text-align: center;
+  }
+  h2 {
+    padding-top: 10px;
+    font-size: 22px;
+    font-family: arial;
+    color: #709a8e;
+    text-align: center;
+  }
+
+  h3 {
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: arial;
+    color: #709a8e;
+    text-align: left;
+  }
+  
+  p{
+      font-size: 13px;
+      font-family: helvetica;
+      text-align: justify;
+      
+    }
+  
+   
+  .c-d{color:white;
+    font-size: 30px;
+  }
+
+  .i {color:white;
+    font-size: 30px;
+  }
+  
+  .left {
+    float: left;
+    padding: 0 10px 0 0;
+  }
+
+  .latitude {
+    color: white;
+    font-family: verdana;
+    font-size: 45px;
+    background-color: rgb(28, 228, 211);
+    border: 1px solid rgb(28, 228, 211);
+      padding: 15px;
+  }
+
+  
+  @media (max-width: 500px) {
+    .navbar li {
+      padding: 10px;
+    }
+    .box {
+      margin-right: 22px;
+      margin-left: 22px;
+    }
+    .navbar ul {
+      visibility: hidden;
+    }
+    #nav-select {
+      visibility: visible;
+    }
+  }
+  
+  .col-1 {width: 8%;}
+  .col-2 {width: 17%;}
+  .col-3 {width: 24%;}
+  .col-4 {width: 32%;}
+  .col-5 {width: 40%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 60%;}
+  .col-8 {width: 65%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 82%;}
+  .col-11 {width: 92%;}
+  .col-12 {width: 100%;}
+  
+  @media only screen and (max-width: 768px) {
+
+      [class*="col-"] {
+          width: 100%;
+      }
+  }

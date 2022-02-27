@@ -11,13 +11,13 @@ d3.select("#forecast").on("click",() =>{
         var img_src = ""
         var straw_yield_text = ""
         if(straw_yield > 2.5){
-            img_src = "static/img/hot.png"
-            straw_yield_text = `Lucky you! This shire is very productive! ${straw_yield}.`
+            img_src = "static/img/cereal_bag.jpg"
+            straw_yield_text = `This shire is very productive! ${straw_yield}.`
         } else if (straw_yield > 1.5){
-            img_src = "static/img/perfect.png"
+            img_src = "static/img/2cereals.jpg"
             straw_yield_text = `It is ok growing your cereals here. ${straw_yield}.`
         } else { 
-            img_src = "static/img/cold.png"
+            img_src = "static/img/1cereal.jpg"
             straw_yield_text = `It is not a productive area. Plant your cereals somewhere else. ${straw_yield}.`
         }
 

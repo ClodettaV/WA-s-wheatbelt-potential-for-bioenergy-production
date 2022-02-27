@@ -8,14 +8,26 @@ from prediction import predict
 app = Flask(__name__)
 
 # engine = create_engine(connection_url)
-CSV_ENDPOINT = os.environ.get("CSV_ENDPOINT")
-print (CSV_ENDPOINT)
+# CSV_ENDPOINT = os.environ.get("CSV_ENDPOINT")
+# print (CSV_ENDPOINT)
 
 # page routes
     
-# @app.route("/")
-# def index():
-#    return render_template("index.html")
+@app.route("/index")
+def index():
+   return render_template("index.html")
+
+@app.route("/objectives")
+def objectives():
+   return render_template("objectives.html")
+
+@app.route("/data")
+def data():
+   return render_template("data.html")
+
+@app.route("/conclusions")
+def conclusions():
+   return render_template("conclusions.html")
 
 @app.route("/forecast")
 def forecast():
@@ -23,15 +35,15 @@ def forecast():
 
 # API routes 
 
-@app.route("/api/StrawYield")
-def get_straw_yield():
-#     print (CSV_ENDPOINT)
-    df = pd.read_csv(CSV_ENDPOINT)
-    data = df.to_dict(orient="records")
-    return {"data": data}
+# @app.route("/api/StrawYield")
+# def get_straw_yield():
+# #     print (CSV_ENDPOINT)
+#     df = pd.read_csv(CSV_ENDPOINT)
+#     data = df.to_dict(orient="records")
+#     return {"data": data}
 
 
-
+# prediction route
 @app.route("/api/predict/<soilpH>/<rain>", methods=["GET"])
 def do_predict(soilpH, rain):
     user_input = {
