@@ -62,3 +62,35 @@ windows:
 ```
 build.bat
 ```
+Deploy app
+
+In the AWS Console, search for "Elastic Beanstalk".
+Choose the region closest to you on the top-right e.g. Sydney (ap-southeast-2)
+Select "Create Application"
+Configure ELB. Note: Unless specified, leave the settings to default.
+
+Provide the application name
+Select Platform: "Python"
+Select Platform Branch: "Python 3.8 running on 64bit Amazon Linux 2"
+In the "Application code" section, select "Upload your code"
+
+Select "Local file" > "Choose file" and select the .zip file you have built
+
+
+Select "Configure more options"
+
+Select "Software" > "Edit"
+
+Provide the environment properties based on your environment variables in _config.template.sh or _config.template.bat.
+Select "Save"
+
+
+Select "Capacity" > "Edit"
+
+Under "Instance types", ensure that only "t2.micro" is selected.
+Select "Save"
+
+
+
+
+Select "Create app"
