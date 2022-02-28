@@ -74,23 +74,23 @@ Deploy app
    3. Select Platform Branch: "Python 3.8 running on 64bit Amazon Linux 2"
    4. In the "Application code" section, select "Upload your code"
 
-       . Select "Local file" > "Choose file" and select the .zip file you have built
+       -Select "Local file" > "Choose file" and select the .zip file you have built
 
 
    5. Select "Configure more options"
 
         1. Select "Software" > "Edit"
 
-Provide the environment properties based on your environment variables in _config.template.sh or _config.template.bat.
-Select "Save"
+           - Provide the environment properties based on your environment variables in _config.template.sh or _config.template.bat.
+           - Select "Save"
 
 
-Select "Capacity" > "Edit"
+        2. Select "Capacity" > "Edit"
 
-Under "Instance types", ensure that only "t2.micro" is selected.
-Select "Save"
-
-
+            - Under "Instance types", ensure that only "t2.micro" is selected.
+            - Select "Save"
 
 
-Select "Create app"
+
+
+    6. Select "Create app"
