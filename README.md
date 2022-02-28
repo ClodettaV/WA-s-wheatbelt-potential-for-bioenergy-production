@@ -16,6 +16,7 @@ MSE (mean square error) and R2 score have been used to quantify the model. the R
 Run the application locally
 
 To run the application locally, simply run
+ ```
 cd app
 python app.py
  ```
