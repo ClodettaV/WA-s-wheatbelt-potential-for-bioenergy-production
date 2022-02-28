@@ -1,4 +1,4 @@
-# Bioenergy - Cereal straw analysis
+# Bioenergy - Cereal straw yield analysis
 ## Purpose and motivation
 
 I have created a website that display analysis of straw yield for cereals in some WA shires, rainfall and soil pH. The objective of this project is to understand the relationship between the data and to calculate the straw yield through an application built with javascript and flask.
@@ -13,3 +13,9 @@ In order to quantify our model against input values, the data are split into tra
 MSE (mean square error) and R2 score have been used to quantify the model. the R2 score gives low accuracy for this model: 0.33, where 1 is the best accuracy.
 
 ## Usage
+Run the application locally
+
+To run the application locally, simply run
+cd app
+python app.py
+ ```
