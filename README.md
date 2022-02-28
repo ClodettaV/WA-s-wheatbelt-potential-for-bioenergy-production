@@ -37,6 +37,7 @@ Follow these steps to deploy the solution to AWS.
 Deploy ETL to AWS Elastic Beanstalk
 
 Build app
+
 Before we can deploy the app, we need to first build the app.
 Building the app refers to packaging and compiling the app so that it is in a state that can be readily deployed onto the target platform (e.g. AWS, Heroku, Azure, GCP, etc). We can skip the compilation since Python is not a compiled language, however we still need to package the app.
 To package the app, we will run the following lines of code:
