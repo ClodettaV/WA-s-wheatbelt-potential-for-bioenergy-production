@@ -4,7 +4,7 @@
 <head>
   
 <meta charset="UTF-8">
-  <title>Biofuel </title>
+  <title>Bioenergy - Cereal straw yield analysis  </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="/app/static/css/styles.css"> -->
   <link rel="stylesheet" href="{{url_for('static', filename= 'css/styles.css') }}"> 
@@ -21,10 +21,10 @@
     <p class="navbar-brand">Data</p>
       
       <div class="topnav">
-      <a class="active" href="index">Home</a>
+      <a class="active" href="/">Home</a>
       <a href="objectives">Objectives</a>
       <a href="data">Data</a>
-      <a href="forecast">Prediction</a>
+      <a href="forecast">ML Model and Prediction</a>
       <a href="conclusions">Conclusions</a>
        </div>
          
@@ -42,9 +42,9 @@
    <div class="container-fluid">
    <div class="row justify-content-md-auto row-cols-2">
    <div class="col-sm-5"><div class="p-3 bg-white">
-          <h2>Cereals dataset</h2>
+          <h2>Straw yield dataset</h2>
              <p><br>
-                The cereal dataset includes average straw yield per hectares in some of the shires in Western Australia between 2006 and 2010, together with the total residue in each shire.
+                The straw dataset includes the average straw yield per hectares in some of the shires in Western Australia for 2006 to 2010 and the total residue in each shire.
                 This has been sourced from the Australian Government National map. At the moment, data are available only for 25 shires in WA.
              </p>
 
@@ -54,11 +54,11 @@
                 This dataset is a CSV file from an Australian Government dataset which reports soil pH measured for 1315 samples collected across Australia, with relative coordinates of the station.</p>
 
              <h2>Rainfall dataset</h2>
-             <p><br>Rainfall contributes to a soil’s acidity. Water (H₂O) combines with carbon dioxide (CO₂) to form a weak acid — carbonic acid (H₂CO₃). The weak acid ionizes, releasing hydrogen (H⁺) and bicarbonate (HCO₃). The released hydrogen ions replace the calcium ions held by soil colloids, causing the soil to become acidic. The displaced calcium (Ca⁺⁺) ions combine with the bicarbonate ions to form calcium bicarbonate, which, being soluble, is leached from the soil. The net effect is increased soil acidity, (https://www.cropnutrition.com/nutrient-management/soil-ph). Rainfall also contribute to a reduced water consumption from aquifers and catchments.
-                The rainfall dataset has been retrieved from the department of primary industries and regional development of Western Australia, through API endpoint. The dataset consist of the total rain in mm collected in 226 stations in Western Australia. Coordinates, station name, datetime, rainfall period are also available within the dataset.
-                 </p>
+             <p><br>Rainfall contributes to a soil acidity. Water (H₂O) combines with carbon dioxide (CO₂) to form a weak acid — carbonic acid (H₂CO₃). The weak acid ionizes, releasing hydrogen (H⁺) and bicarbonate (HCO₃). The released hydrogen ions replace the calcium ions held by soil colloids, causing the soil to become acidic. The displaced calcium (Ca⁺⁺) ions combine with the bicarbonate ions to form calcium bicarbonate, which, being soluble, is leached from the soil. The net effect is increased soil acidity, (https://www.cropnutrition.com/nutrient-management/soil-ph). Obviously, rain also contribute to reduce water consumption from aquifers and catchments, which are used to irrigate crops.
+               <br><br>The rainfall dataset has been retrieved from the department of primary industries and regional development of Western Australia, from an API endpoint. The dataset consist of the total rain in mm collected in 226 stations in Western Australia. Coordinates, station name, datetime, rainfall period are also available within the dataset.
+                 <!-- </p>
 
-              <p> Because the rain and soil datasets only provide coordinates and not shire name, to be able to merge the data a local government area dataset for WA in geojson format with polygons and locations has been used. The Shapely Python library was able to extract the lat and long from the 2 datasets and check them against areas in the geojson file.
+              <p> -->
             </p>  
 
            </div>
@@ -67,8 +67,10 @@
   <!-- Second Column first row -->
 
   <div class="col-sm-7 p-2">
+
+   <div class='tableauPlaceholder' id='viz1646040403789' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Story_Project_Final&#47;StrawYieldDataAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1646040403789');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   
-        <div class='tableauPlaceholder' id='viz1645956528854' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Story_Project_Final&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1645956528854');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!-- <div class='tableauPlaceholder' id='viz1645956528854' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Story_Project_Final&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1645956528854');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
 
    </div>
    </div>     

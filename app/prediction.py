@@ -11,17 +11,7 @@ def predict(user_inputs):
     # get the user input data 
     soilpH = user_inputs["tos_field_ph"]
     rain = user_inputs["rainfall.yearToDate"]
-    # shire = user_inputs ["shire"]
-    
-    # store shire names into a df 
-    # shire_input_df = pd.DataFrame({
-    #     "shire": [shire]
-    # })
-
-    #use encoder to transform the shire df 
-    # X_transformed = encoder.transform(shire_input_df)
-    # shire_df = pd.DataFrame(columns=[*encoder.categories_], data=X_transformed.toarray())
-    
+            
     # store soilpH and rain into df 
     input_df = pd.DataFrame({
         "tos_field_ph": [soilpH],
