@@ -64,10 +64,10 @@ build.bat
 ```
 Deploy app
 
-1.In the AWS Console, search for "Elastic Beanstalk".
-2.Choose the region closest to you on the top-right e.g. Sydney (ap-southeast-2)
-3.Select "Create Application"
-4.Configure ELB. Note: Unless specified, leave the settings to default.
+1. In the AWS Console, search for "Elastic Beanstalk".
+2. Choose the region closest to you on the top-right e.g. Sydney (ap-southeast-2)
+3. Select "Create Application"
+4. Configure ELB. Note: Unless specified, leave the settings to default.
 
    1.Provide the application name
    2.Select Platform: "Python"
