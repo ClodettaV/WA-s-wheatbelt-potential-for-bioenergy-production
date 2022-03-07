@@ -3,7 +3,7 @@
 
 I have created a website that display analysis of straw yield for cereals in some WA shires, rainfall and soil pH. The objective of this project is to understand the relationship between the data and to calculate the straw yield through an application built with javascript and flask.
 
-Link to the website: http://cerealyield-env.eba-kn54qyjm.ap-southeast-2.elasticbeanstalk.com/
+Link to the website: http://cerealstrawyield070322-env.eba-siwwnmm4.ap-southeast-2.elasticbeanstalk.com/
 
 ## Solution
 Icons were taken from: https://www.vecta.io/
