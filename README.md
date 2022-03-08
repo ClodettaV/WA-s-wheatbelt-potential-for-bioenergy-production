@@ -1,4 +1,4 @@
-# WA’s wheatbelt potential for bioenergy production WA’s wheatbelt potential for bioenergy production
+# WA’s wheatbelt potential for bioenergy production 
 
 ## Purpose and motivation
 
